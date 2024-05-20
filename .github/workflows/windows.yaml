@@ -12,6 +12,7 @@ jobs:
     strategy:
       matrix:
         configuration: [Debug, Release]
+      fail-fast: false
     runs-on: windows-latest
 
     steps:

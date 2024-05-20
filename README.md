@@ -3,6 +3,10 @@ C# code to find the full path of an executable file by searching the system's se
 
 The code was previously part of [SGrottel's Tiny Tools Collection (https://github.com/sgrottel/tiny-tools-collection)](https://github.com/sgrottel/tiny-tools-collection).
 
+[![GitHub License](https://img.shields.io/github/license/sgrottel/FindExecutable)](./LICENSE)
+[![Windows](https://github.com/sgrottel/FindExecutable/actions/workflows/windows.yaml/badge.svg)](https://github.com/sgrottel/FindExecutable/actions/workflows/windows.yaml)
+
+
 ## Code
 The code is located in the `FindExecutable` subdirectiory.
 
