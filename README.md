@@ -4,12 +4,16 @@ C# code to find the full path of an executable file by searching the system's se
 It is similar to `locate` or `get-command`.
 The code is compatible with Windows, Linux, and MacOS.
 
-The code was previously part of [SGrottel's Tiny Tools Collection (https://github.com/sgrottel/tiny-tools-collection)](https://github.com/sgrottel/tiny-tools-collection).
-
+[![Nuget](https://img.shields.io/nuget/v/SGrottel.FindExecutable?color=green)](https://www.nuget.org/packages/SGrottel.FindExecutable)
 [![GitHub License](https://img.shields.io/github/license/sgrottel/FindExecutable)](./LICENSE)
 [![Windows](https://github.com/sgrottel/FindExecutable/actions/workflows/windows.yaml/badge.svg)](https://github.com/sgrottel/FindExecutable/actions/workflows/windows.yaml)
 [![Ubuntu](https://github.com/sgrottel/FindExecutable/actions/workflows/ubuntu.yaml/badge.svg)](https://github.com/sgrottel/FindExecutable/actions/workflows/ubuntu.yaml)
 [![MacOS](https://github.com/sgrottel/FindExecutable/actions/workflows/macos.yaml/badge.svg)](https://github.com/sgrottel/FindExecutable/actions/workflows/macos.yaml)
+
+Nuget:
+[SGrottel.FindExecutable (https://www.nuget.org/packages/SGrottel.FindExecutable)](https://www.nuget.org/packages/SGrottel.FindExecutable)
+
+The code was previously part of [SGrottel's Tiny Tools Collection (https://github.com/sgrottel/tiny-tools-collection)](https://github.com/sgrottel/tiny-tools-collection).
 
 ## Code
 The code is located in the `FindExecutable` subdirectiory.
@@ -39,7 +43,7 @@ You can simple copy this directory and all it's files to your project.
 Or, you can use the `SGrottel.FindExecutable.nuget` to import the files into your project.
 This way, if you manage your dependencies with tooling, you can be automatically informed about updates.
 
-🚧 TODO: Nuget link
+[SGrottel.FindExecutable (https://www.nuget.org/packages/SGrottel.FindExecutable)](https://www.nuget.org/packages/SGrottel.FindExecutable)
 
 ## Contributions
 Contributions to this project are welcome!

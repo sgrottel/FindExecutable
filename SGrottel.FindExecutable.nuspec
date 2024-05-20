@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package
+	xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+	<!-- nuget pack .\SGrottel.FindExecutable.nuspec -->
+
+	<!-- package metadata -->
+	<metadata minClientVersion="3.3" >
+		<id>SGrottel.FindExecutable</id>
+		<version>0.4.0.5</version>
+		<title>SGrottel.FindExecutable</title>
+		<authors>SGrottel</authors>
+		<owners>SGrottel</owners>
+		<license type="expression">MIT</license>
+		<projectUrl>https://github.com/sgrottel/FindExecutable</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>C# code to find the full path of an executable file by searching the system's search paths.</description>
+		<copyright>Copyright 2023-2024</copyright>
+		<tags>FindExecutable</tags>
+		<readme>docs/README.md</readme>
+
+		<contentFiles>
+			<files include="cs/any/FindExecutable/FindExecutable.cs" />
+			<files include="cs/any/FindExecutable/ComponentSource.json" buildAction="None" />
+			<files include="cs/any/FindExecutable/LICENSE" buildAction="None" />
+		</contentFiles>
+	</metadata>
+
+	<!-- content -->
+	<files>
+		<file src="FindExecutable\FindExecutable.cs" target="contentFiles/cs/any/FindExecutable" />
+		<file src="FindExecutable\ComponentSource.json" target="contentFiles/cs/any/FindExecutable" />
+		<file src="LICENSE" target="contentFiles/cs/any/FindExecutable/LICENSE" />
+
+		<file src="package_readme.md" target="docs/README.md" />
+	</files>
+
+</package>
