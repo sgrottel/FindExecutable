@@ -12,8 +12,10 @@ namespace FindExecutable
 {
 	internal class Program
 	{
-		static void Main(string[] args)
+		static int Main(string[] args)
 		{
+			int retval = 0;
+
 			string[] executables = new string[] {
 				"git.exe",
 				"git"
@@ -40,16 +42,23 @@ namespace FindExecutable
 					}
 					else
 					{
-						Console.WriteLine("NOT FOUND");
+						Console.Error.WriteLine("NOT FOUND");
+						retval = 1;
 					}
 				}
 				catch (Exception e)
 				{
 					Console.Error.WriteLine($"FAILED, Exception: {e}");
+					retval = 2;
 				}
 			}
 
 			Console.WriteLine("done.");
+			if (retval != 0)
+			{
+				Console.WriteLine($"exit code: {retval}");
+			}
+			return retval;
 		}
 	}
 }
