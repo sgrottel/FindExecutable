@@ -8,7 +8,7 @@ The code was previously part of [SGrottel's Tiny Tools Collection (https://githu
 
 [![GitHub License](https://img.shields.io/github/license/sgrottel/FindExecutable)](./LICENSE)
 [![Windows](https://github.com/sgrottel/FindExecutable/actions/workflows/windows.yaml/badge.svg)](https://github.com/sgrottel/FindExecutable/actions/workflows/windows.yaml)
-
+[![Ubuntu](https://github.com/sgrottel/FindExecutable/actions/workflows/ubuntu.yaml/badge.svg)](https://github.com/sgrottel/FindExecutable/actions/workflows/ubuntu.yaml)
 
 ## Code
 The code is located in the `FindExecutable` subdirectiory.
