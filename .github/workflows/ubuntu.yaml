@@ -1,8 +1,8 @@
-name: Windows
+name: Ubuntu
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "ci-testing" ]
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
       matrix:
         configuration: [Debug, Release]
       fail-fast: false
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
@@ -36,4 +36,4 @@ jobs:
       shell: pwsh
       run: |
         cd ((([object[]](gci .\bin\${{matrix.configuration}}\))[-1]).FullName)
-        dotnet .\FindExecutable.dll
+        dotnet ./FindExecutable.dll

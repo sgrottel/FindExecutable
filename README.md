@@ -1,6 +1,9 @@
 # FindExecutable
 C# code to find the full path of an executable file by searching the system's search paths.
 
+It is similar to `locate` or `get-command`.
+The code is compatible with Windows and Linux (and likely modern MacOS).
+
 The code was previously part of [SGrottel's Tiny Tools Collection (https://github.com/sgrottel/tiny-tools-collection)](https://github.com/sgrottel/tiny-tools-collection).
 
 [![GitHub License](https://img.shields.io/github/license/sgrottel/FindExecutable)](./LICENSE)
