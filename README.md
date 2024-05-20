@@ -1,7 +1,15 @@
 # FindExecutable
 C# code to find the full path of an executable file by searching the system's search paths.
 
+It is similar to `locate` or `get-command`.
+The code is compatible with Windows, Linux, and MacOS.
+
 The code was previously part of [SGrottel's Tiny Tools Collection (https://github.com/sgrottel/tiny-tools-collection)](https://github.com/sgrottel/tiny-tools-collection).
+
+[![GitHub License](https://img.shields.io/github/license/sgrottel/FindExecutable)](./LICENSE)
+[![Windows](https://github.com/sgrottel/FindExecutable/actions/workflows/windows.yaml/badge.svg)](https://github.com/sgrottel/FindExecutable/actions/workflows/windows.yaml)
+[![Ubuntu](https://github.com/sgrottel/FindExecutable/actions/workflows/ubuntu.yaml/badge.svg)](https://github.com/sgrottel/FindExecutable/actions/workflows/ubuntu.yaml)
+[![MacOS](https://github.com/sgrottel/FindExecutable/actions/workflows/macos.yaml/badge.svg)](https://github.com/sgrottel/FindExecutable/actions/workflows/macos.yaml)
 
 ## Code
 The code is located in the `FindExecutable` subdirectiory.
@@ -35,7 +43,7 @@ This way, if you manage your dependencies with tooling, you can be automatically
 
 ## Contributions
 Contributions to this project are welcome!
-* Open [Issues]() here on Github
+* Open [Issues](https://github.com/sgrottel/FindExecutable/issues) here on Github
 * Create Pull Requests with Improvements (I recommend you talk to me first, e.g. via e-mail or issues)
 * Reach out to me, e.g. via [the contact form on my website (https://www.sgrottel.de/about)](https://www.sgrottel.de/about).
 
