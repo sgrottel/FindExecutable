@@ -18,7 +18,7 @@ namespace FindExecutable
 
 			string[] executables = new string[] {
 				"git.exe",
-				"giet"
+				"git"
 			};
 
 			foreach (string executable in executables)
