@@ -35,7 +35,7 @@ This way, if you manage your dependencies with tooling, you can be automatically
 
 ## Contributions
 Contributions to this project are welcome!
-* Open [Issues]() here on Github
+* Open [Issues](https://github.com/sgrottel/FindExecutable/issues) here on Github
 * Create Pull Requests with Improvements (I recommend you talk to me first, e.g. via e-mail or issues)
 * Reach out to me, e.g. via [the contact form on my website (https://www.sgrottel.de/about)](https://www.sgrottel.de/about).
 
