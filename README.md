@@ -1,4 +1,5 @@
 # FindExecutable
+
 C# code to find the full path of an executable file by searching the system's search paths.
 
 It is similar to `locate` or `get-command`.
@@ -15,11 +16,16 @@ Nuget:
 
 The code was previously part of [SGrottel's Tiny Tools Collection (https://github.com/sgrottel/tiny-tools-collection)](https://github.com/sgrottel/tiny-tools-collection).
 
+
 ## Code
+
 The code is located in the `FindExecutable` subdirectiory.
 
+
 ### Example
+
 `FindExecutable` is a static class with one public static method:
+
 ```cs
 public static string? FullPath(
 	string executable,
@@ -37,7 +43,9 @@ The function will return the full file system path to the executable file reques
 
 A description of how the function performs it's search can be found in the function comment in the source code.
 
+
 ### How to Add to Your Project
+
 You can simple copy this directory and all it's files to your project.
 
 Or, you can use the `SGrottel.FindExecutable.nuget` to import the files into your project.
@@ -45,16 +53,21 @@ This way, if you manage your dependencies with tooling, you can be automatically
 
 [SGrottel.FindExecutable (https://www.nuget.org/packages/SGrottel.FindExecutable)](https://www.nuget.org/packages/SGrottel.FindExecutable)
 
+
 ## Contributions
+
 Contributions to this project are welcome!
+
 * Open [Issues](https://github.com/sgrottel/FindExecutable/issues) here on Github
 * Create Pull Requests with Improvements (I recommend you talk to me first, e.g. via e-mail or issues)
 * Reach out to me, e.g. via [the contact form on my website (https://www.sgrottel.de/about)](https://www.sgrottel.de/about).
 
+
 ## License
+
 This project is freely available under the terms of the [MIT License](./LICENSE)
 
-	Copyright (c) 2023-2024 Sebastian Grottel
+	Copyright (c) 2023-2025 Sebastian Grottel
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
