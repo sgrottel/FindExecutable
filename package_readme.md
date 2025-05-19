@@ -23,7 +23,7 @@ The function will return the full file system path to the executable file reques
 ## License
 This project is freely available under the terms of the [MIT License](./LICENSE)
 
-	Copyright (c) 2023-2024 Sebastian Grottel
+	Copyright (c) 2023-2025 Sebastian Grottel
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
