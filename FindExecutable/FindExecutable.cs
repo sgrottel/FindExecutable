@@ -3,7 +3,7 @@
 // Copyright, by SGrottel.de  https://www.github.com/sgrottel/FindExecutable
 // Open Source under the `MIT license`
 //
-// Copyright(c) 2023-2025 Sebastian Grottel
+// Copyright(c) 2023-2026 Sebastian Grottel
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,9 +25,11 @@
 //
 // Version history:
 //
-//  v1.0  --  2025-05-19
-//  v0.4  --  2024-05-20
-//  v0.1  --  2023-11-26
+//  v1.0.1  --  2026-02-22
+//              resolved findings by scanners
+//  v1.0    --  2025-05-19
+//  v0.4    --  2024-05-20
+//  v0.1    --  2023-11-26
 //
 
 using System;
