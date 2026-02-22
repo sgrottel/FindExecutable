@@ -109,7 +109,15 @@ namespace FindExecutable
                         continue;
                     }
 
-                    string p = Path.GetFullPath(path);
+                    string p;
+                    try
+                    {
+                        p = Path.GetFullPath(path);
+                    }
+                    catch
+                    {
+                        continue; // skip if `GetFullPath` failed, as then the string value of `path` was likely illegal
+                    }
                     if (!Directory.Exists(p))
                     {
                         continue;
