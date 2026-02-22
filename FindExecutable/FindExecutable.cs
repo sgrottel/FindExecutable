@@ -70,6 +70,15 @@ namespace FindExecutable
             bool includeBaseDirectory = false,
             IEnumerable<string>? additionalPaths = null)
         {
+            if (Path.IsPathRooted(executable))
+            {
+                if (File.Exists(executable) && IsExecutable(executable))
+                {
+                    return executable; 
+                }
+                return null;
+            }
+
             IEnumerable<string> paths = Environment.GetEnvironmentVariable("PATH")?.Split(Path.PathSeparator) ?? Array.Empty<string>();
             if (includeCurrentDirectory)
             {
