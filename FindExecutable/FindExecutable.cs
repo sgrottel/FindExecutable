@@ -3,7 +3,7 @@
 // Copyright, by SGrottel.de  https://www.github.com/sgrottel/FindExecutable
 // Open Source under the `MIT license`
 //
-// Copyright(c) 2023-2025 Sebastian Grottel
+// Copyright(c) 2023-2026 Sebastian Grottel
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,9 +25,11 @@
 //
 // Version history:
 //
-//  v1.0  --  2025-05-19
-//  v0.4  --  2024-05-20
-//  v0.1  --  2023-11-26
+//  v1.0.1  --  2026-02-22
+//              resolved findings by scanners
+//  v1.0    --  2025-05-19
+//  v0.4    --  2024-05-20
+//  v0.1    --  2023-11-26
 //
 
 using System;
@@ -68,6 +70,15 @@ namespace FindExecutable
             bool includeBaseDirectory = false,
             IEnumerable<string>? additionalPaths = null)
         {
+            if (Path.IsPathRooted(executable))
+            {
+                if (File.Exists(executable) && IsExecutable(executable))
+                {
+                    return executable; 
+                }
+                return null;
+            }
+
             IEnumerable<string> paths = Environment.GetEnvironmentVariable("PATH")?.Split(Path.PathSeparator) ?? Array.Empty<string>();
             if (includeCurrentDirectory)
             {
@@ -98,7 +109,15 @@ namespace FindExecutable
                         continue;
                     }
 
-                    string p = Path.GetFullPath(path);
+                    string p;
+                    try
+                    {
+                        p = Path.GetFullPath(path);
+                    }
+                    catch
+                    {
+                        continue; // skip if `GetFullPath` failed, as then the string value of `path` was likely illegal
+                    }
                     if (!Directory.Exists(p))
                     {
                         continue;
@@ -145,7 +164,7 @@ namespace FindExecutable
         #region Test if File is Executable
 
         #region Windows P/Invoke
-        [DllImport("shell32.dll")]
+        [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
         private static extern IntPtr SHGetFileInfo(string pszPath, uint dwFileAttributes, IntPtr psfi, uint cbSizeFileInfo, uint uFlags);
         private const uint SHGFI_EXETYPE = 0x000002000;
         #endregion
@@ -185,7 +204,7 @@ namespace FindExecutable
         }
 
         #region Linux P/Invoke
-        [DllImport("libc", SetLastError = true)]
+        [DllImport("libc", CharSet = CharSet.Ansi, SetLastError = true)]
         private static extern int access(string pathname, int mode);
         // https://codebrowser.dev/glibc/glibc/posix/unistd.h.html#283
         private const int X_OK = 1;
