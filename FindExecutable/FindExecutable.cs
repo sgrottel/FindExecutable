@@ -164,6 +164,7 @@ namespace FindExecutable
         #region Test if File is Executable
 
         #region Windows P/Invoke
+        [SupportedOSPlatform("Windows")]
         [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
         private static extern IntPtr SHGetFileInfo(string pszPath, uint dwFileAttributes, IntPtr psfi, uint cbSizeFileInfo, uint uFlags);
         private const uint SHGFI_EXETYPE = 0x000002000;
@@ -204,7 +205,8 @@ namespace FindExecutable
         }
 
         #region Linux P/Invoke
-        [DllImport("libc", CharSet = CharSet.Ansi, SetLastError = true)]
+        [UnsupportedOSPlatform("Windows")]
+        [DllImport("libc", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern int access(string pathname, int mode);
         // https://codebrowser.dev/glibc/glibc/posix/unistd.h.html#283
         private const int X_OK = 1;
