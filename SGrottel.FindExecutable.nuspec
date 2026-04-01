@@ -20,7 +20,6 @@
 
 		<contentFiles>
 			<files include="cs/any/FindExecutable/FindExecutable.cs" />
-			<files include="cs/any/FindExecutable/ComponentSource.json" buildAction="None" />
 			<files include="cs/any/FindExecutable/LICENSE" buildAction="None" />
 		</contentFiles>
 	</metadata>
@@ -28,7 +27,6 @@
 	<!-- content -->
 	<files>
 		<file src="FindExecutable\FindExecutable.cs" target="contentFiles/cs/any/FindExecutable" />
-		<file src="FindExecutable\ComponentSource.json" target="contentFiles/cs/any/FindExecutable" />
 		<file src="LICENSE" target="contentFiles/cs/any/FindExecutable/LICENSE" />
 
 		<file src="package_readme.md" target="docs/README.md" />

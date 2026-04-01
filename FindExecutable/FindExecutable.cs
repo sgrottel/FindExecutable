@@ -25,7 +25,7 @@
 //
 // Version history:
 //
-//  v1.0.2  --  2026-03-31
+//  v1.0.2  --  2026-04-01
 //              resolved further finding by code analyzer
 //  v1.0.1  --  2026-02-22
 //              resolved findings by scanners
